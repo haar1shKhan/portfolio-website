@@ -2,26 +2,181 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components{
+
+  .navbtn{
+    @apply  text-white font-light cursor-pointer  lg:mx-6 mb-2 p-4 hover:text-[#ff4d05] text-lg rounded-lg 
   }
+
+  .navbtnMob{
+    @apply  text-white font-light cursor-pointer mx-6 mb-2 p-4 hover:text-[#ff4d05] text-lg rounded-lg 
+  }
+  
+  .footerbtn{
+    @apply  text-white font-light cursor-pointer mx-20  pb-5 hover:text-[#ff4d05] text-lg rounded-lg 
+  }
+
+  .contactLink{
+    @apply flex lg:mx-2 space-x-4 text-white  hover:text-[#ff4d05] mb-4 mx-auto items-end 
+  }
+  .footercontactLink{
+    @apply  text-white font-light cursor-pointer mx-20  pb-5 hover:text-[#ff4d05] text-lg rounded-lg space-x-3 flex
+
+     }
+  .primarybtn{
+    @apply bg-gradient-to-r from-[#FFE53B] to-[#FF2525] px-4 md:px-8 py-1 mx-2 my-4 md:py-2 w-fit rounded-md text-black font-semibold 
+     }
+  .sectionheader{
+    @apply text-white text-center lg:text-2xl m-4 font-mono pb-5 mx-10 border-b border-b-[#ff4d05]  }
+  
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.ck{
+  background-color: #252424 !important; 
+  color: white !important;
+  
 }
+
+.ck-editor__editable{
+  height: 250px !important;
+  width: 100% !important;
+} 
+
+body{
+  background: black;  
+}
+
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+  border-radius: 50px;
+  height: 0;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  border-radius: 50px;
+
+}
+
+.projectsScroll::-webkit-scrollbar {
+  background: #1a1919;
+  border-radius: 50px;
+  height: 5px;
+
+}
+.projectsScroll::-webkit-scrollbar-thumb{
+  background: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  border-radius: 50px;
+}
+
+.filepond--panel-root {
+  background-color: #110f0f  !important;
+}
+
+.filepond--drop-label {
+  color: white !important;
+}
+
+
+.heroImg{
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
+  overflow: hidden;
+}
+
+div.DraftEditor-root {
+  border: 1px solid #000;
+  background-color: #252424;
+
+  height: 200px;
+  grid-column: span 2 / span 2;
+  color: white;
+  overflow-y: auto;
+}
+
+div.DraftEditor-editorContainer,
+div.public-DraftEditor-content {
+  height: 100%;
+}
+
+
+.login::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  background: url('../public/images/Simple\ Shiny.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px);
+  
+}
+
+.login::after{
+  opacity: 0.5;
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 100%;;
+  width: 100%;
+  z-index: -1;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  background: linear-gradient(to bottom,   rgba(255,255,255,0),
+             rgba(0,0,0,1)), url('../public/images/Simple\ Shiny.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  filter: blur(2px);
+  
+}
+
+.hero::after{
+  opacity: 0.5;
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 100%;;
+  width: 100%;
+  z-index: -1;
+}
+
+
+
+
+/* .contactImg::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  background:  #131313 url('../public/images/World\ Map.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  
+} */
+
+/* .contactImg::after{
+  opacity: 0.5;
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 100%;;
+  width: 100%;
+  z-index: -1;
+} */
